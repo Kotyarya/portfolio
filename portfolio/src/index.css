@@ -6,14 +6,9 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Plus Jakarta", serif;
     text-decoration: none;
 }
 
-a,
-p {
-    color: #424551;
-}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -75,6 +70,11 @@ button {
 
 /*--------------------*/
 /*-----------Text-----------*/
+
+[class*=textPlusJakarta] {
+    font-family: "Plus Jakarta", sans-serif;
+}
+
 [class*=textPreahvihear] {
     font-family: "Preahvihear", sans-serif;
 }

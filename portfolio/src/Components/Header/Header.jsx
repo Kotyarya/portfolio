@@ -4,12 +4,8 @@ import logoForLight from "./img/logoForLight.png"
 import moon from "./img/darkThemeIcon.png"
 import sun from "./img/lightThemeIcon.png"
 import langForDark from "./img/langIconForDark.png"
-import langForLight from "./img/langIconForLight.png"
 import {NavLink} from "react-router-dom";
-import {connect} from "react-redux";
-import {toggleTheme} from "../../Redux/Reducers/themeReducer";
 import {useState} from "react";
-import {selectLang} from "../../Redux/Reducers/langReducer";
 
 const Header = (props) => {
     const [editMode, toggleEditMode] = useState(false)
@@ -27,7 +23,7 @@ const Header = (props) => {
             <NavLink to={"/home"}>
                 <img className={style.logo} src={props.theme === "light" ? logoForLight : logoForDark} alt=""/>
             </NavLink>
-            <nav className={style.nav}>
+            <nav className={style.nav + " textPlusJakarta"}>
                 <ul className={style.list}>
                     <NavLink to={"/skills"}
                              className={({isActive}) => isActive ? `${style.item} ${style.active}` : style.item}>{props.lang === "eng" ? "Skills" : "Umiejętności"}</NavLink>
@@ -40,21 +36,12 @@ const Header = (props) => {
                     <img src={props.theme === "light" ? sun : moon} alt=""/>
                 </button>
                 <button onClick={() => toggleEditMode(true)} className={style.btn}>
-                    <img src={props.theme === "light" ? langForLight : langForDark} alt=""/>
+                    <img className={style.langIcon} src={langForDark} alt=""/>
                 </button>
             </nav>
         </header>
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        theme: state.themeState.theme,
-        lang: state.langState.lang
-    }
-}
 
-export default connect(mapStateToProps, {
-    toggleTheme,
-    selectLang
-})(Header)
+export default Header

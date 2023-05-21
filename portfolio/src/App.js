@@ -1,10 +1,22 @@
 import './App.css';
-import Header from "./Components/Header/Header";
+import {connect} from "react-redux";
+import HomePage from "./Components/HomePage/HomePage";
+import {Route, Routes} from "react-router-dom";
 
-function App() {
-  return (
-      <Header/>
-  );
+function App(props) {
+    return (
+        <div className={"app"} theme={props.theme}>
+            <Routes>
+                <Route path="/home" element={<HomePage/>}/>
+            </Routes>
+        </div>
+    );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        theme: state.themeState.theme
+    }
+}
+
+export default connect(mapStateToProps)(App);

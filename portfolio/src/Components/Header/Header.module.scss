@@ -102,7 +102,7 @@
   }
 }
 
-[theme="light"] {
+[theme="light"].header {
   background: #ffffff;
   box-shadow: 0 0.4rem 2.2rem -0.3rem #FFB8B8;
 
@@ -125,6 +125,12 @@
   }
 
   .nav {
+    .btn {
+      .langIcon {
+        filter: invert(1);
+      }
+    }
+
     .list {
       .item {
         color: #000000;

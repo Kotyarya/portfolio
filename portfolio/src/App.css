@@ -1,0 +1,11 @@
+[theme="dark"] {
+    background: #1F0707;
+}
+
+[theme="light"] {
+    background: #fff;
+}
+
+.app {
+    min-height: 100vh;
+}
