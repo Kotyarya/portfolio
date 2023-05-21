@@ -51,7 +51,7 @@ const HomePage = (props) => {
                                 className={style.redText}>front-end</span> {setText("programmer. ", "programistą ")}
                                 <Span/>
                             </p>
-                            <p className={style.text}> {setText("To be more precise, I've been studying this area for", "Mówiąc dokładniej, studiuję tę dziedzinę od ")}
+                            <p className={style.text}> {setText("To be more precise, I've been studying this area for ", "Mówiąc dokładniej, studiuję tę dziedzinę od ")}
                                 <span
                                     className={style.redText}>{
                                     setText("2 years now", "2 lat")}</span></p>
