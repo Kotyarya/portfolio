@@ -1,4 +1,3 @@
-import Header from "../Header/Header";
 import style from "./HomePage.module.scss";
 import arrowImg from "./img/arrow.png";
 import homeImg from "./img/homeImg.png";
@@ -7,14 +6,14 @@ import {connect} from "react-redux";
 import {toggleTheme} from "../../Redux/Reducers/themeReducer";
 import {selectLang} from "../../Redux/Reducers/langReducer";
 import Span from "./Span";
+import {compose} from "@reduxjs/toolkit";
+import withHeader from "../../HOC/withHeader";
 
 const HomePage = (props) => {
 
+
     const downloadCV = () => {
         const element = document.createElement("a");
-        // const file = new Blob([document.getElementById("input").value], {
-        //     type: "text/plain;charset=utf-8}"
-        // });
         element.href = "static/media/homeImg.36bf95b5903769323ba9.png";
         element.download = "arrow.png";
         element.click();
@@ -26,9 +25,8 @@ const HomePage = (props) => {
 
     return (
         <>
-            <div className={style.wrapper} theme={props.theme}>
-                <Header {...props}/>
-                <div className={style.content}>
+            <div className={style.wrapper}>
+                <div className={style.content} theme={props.theme}>
                     <div className={style.title}>
                         <img className={setText(style.eclipse, `${style.eclipse} ${style.plnEclipse}`)} src={eclipseImg}
                              alt=""/>
@@ -36,24 +34,25 @@ const HomePage = (props) => {
                         <span className={style.radial}></span>
                         <img className={style.homeImg} src={homeImg} alt=""/>
                         <div className={style.text + " textPreahvihear"}>
-                            <p className={style.hey}>
-                                {setText('Hey! I Am ', "Hej! Nazywam się ")}<span className={style.redText}>Maksym Aksamitnyi</span>
-                            </p>
+                            <h1 className={style.hey}>
+                                {setText('Hey! I Am ', "Hej! Mam na imię ")}<span
+                                className="redText">Maksym</span>
+                            </h1>
                             <p className={style.who}>{setText("A Programmer who", "Programista, który")}</p>
-                            <p className={style.mainText}>{setText("Is always ready to", "Jest zawsze gotowy")}
+                            <h2 className={style.mainText}>{setText("Is always ready to", "Jest zawsze gotowy")}
                                 <br/> {setText("learn something ", "nauczyć się czegoś ")} <span
-                                    className={style.redText}>{setText("new", "nowego")}</span></p>
+                                    className="redText">{setText("new", "nowego")}</span></h2>
                         </div>
                     </div>
                     <div className={style.descriptionContent + " textPreahvihear"}>
                         <div className={style.description}>
-                            <p className={style.mainText}>{setText("I am a ", "Jestem ")}<span
-                                className={style.redText}>front-end</span> {setText("programmer. ", "programistą ")}
+                            <h3 className={style.mainText}>{setText("I am a ", "Jestem ")}<span
+                                className="redText">front-end</span> {setText("programmer. ", "programistą ")}
                                 <Span/>
-                            </p>
+                            </h3>
                             <p className={style.text}> {setText("To be more precise, I've been studying this area for ", "Mówiąc dokładniej, studiuję tę dziedzinę od ")}
                                 <span
-                                    className={style.redText}>{
+                                    className="redText">{
                                     setText("2 years now", "2 lat")}</span></p>
                         </div>
                         <div className={style.info}>
@@ -74,7 +73,11 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {
-    toggleTheme,
-    selectLang
-})(HomePage)
+export default compose(
+    connect(mapStateToProps, {
+        toggleTheme,
+        selectLang
+    }),
+    withHeader
+)
+(HomePage)

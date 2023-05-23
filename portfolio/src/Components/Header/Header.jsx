@@ -20,7 +20,7 @@ const Header = (props) => {
                 </div>
                 : ""
             }
-            <NavLink to={"/home"}>
+            <NavLink to={"/"}>
                 <img className={style.logo} src={props.theme === "light" ? logoForLight : logoForDark} alt=""/>
             </NavLink>
             <nav className={style.nav + " textPlusJakarta"}>

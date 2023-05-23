@@ -9,3 +9,7 @@
 .app {
     min-height: 100vh;
 }
+
+.redText {
+    color: #BA2727;
+}
