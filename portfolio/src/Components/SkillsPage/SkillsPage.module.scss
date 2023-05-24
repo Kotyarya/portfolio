@@ -15,5 +15,13 @@
       font-weight: 400;
     }
   }
+
+  .skillsContainer {
+    display: grid;
+    grid-template-columns: 57rem 57rem;
+    grid-template-rows: 19.5rem 19.5rem 19.5rem;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1.7rem;
+  }
 }
 
