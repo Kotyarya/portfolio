@@ -1,6 +1,4 @@
 import {connect} from "react-redux";
-import {toggleTheme} from "../../Redux/Reducers/themeReducer";
-import {selectLang} from "../../Redux/Reducers/langReducer";
 import {compose} from "@reduxjs/toolkit";
 import withHeader from "../../HOC/withHeader";
 import style from "./SkillsPage.module.scss"
@@ -8,6 +6,15 @@ import Skill from "./Skill/Skill";
 import htmlImg from "./img/htmlImg.png"
 import cssImg from "./img/cssImg.png"
 import jsImg from "./img/jsImg.png"
+import reactImg from "./img/reactImg.png"
+import reduxImg from "./img/reduxImg.png"
+import sassImg from "./img/sassImg.png"
+import figmaImg from "./img/figmaImg.png"
+import webstormImg from "./img/webstormImg.png"
+import skillsBlockForDarkImg from "./img/skillsBlockForDarkImg.png"
+import skillsBlockForLightImg from "./img/skillsBlockForLightImg.png"
+import logoDark from "../../assets/img/logoForDark.png"
+import Footer from "../Footer/Footer";
 
 const SkillsPage = (props) => {
     const htmlData = {
@@ -22,22 +29,60 @@ const SkillsPage = (props) => {
     }
     const jsData = {
         title: "JavaScript",
-        description: "JavaScript programming language was invented specifically to create interactive websites. A JavaScript program is a sequence of instructions, that is, instructions to the browser to do something.",
+        description: "JavaScript is a programming language designed for building interactive websites. It consists of instructions for the browser to perform specific actions.",
         logo: jsImg
+    }
+    const reactData = {
+        title: "React",
+        description: "React.js is an open-source JavaScript library used for building user interfaces. It enables efficient implementation of reactivity, where changes in one element trigger corresponding changes in other elements.",
+        logo: reactImg
+    }
+    const reduxData = {
+        title: "Redux & Redux-Toolkit",
+        description: "Redux is a tool for managing data state and user interface in JavaScript applications with a large number of entities. It is a JavaScript library.",
+        logo: reduxImg
+    }
+    const sassData = {
+        title: "SASS",
+        description: "Sass is a metalanguage (a language for describing another language) that makes writing CSS code easier and faster.",
+        logo: sassImg
+    }
+    const figmaData = {
+        title: "Figma",
+        description: "Figma - an application to work with the layout of the future web page",
+        logo: figmaImg
+    }
+    const webstormData = {
+        title: "WebStorm",
+        description: "WebStorm is the application I use to write code",
+        logo: webstormImg
     }
 
 
     return (
-        <div className={style.content}>
+        <div className={style.content} theme={props.theme}>
+            <span className={style.gradient}></span>
             <article>
                 <h2 className="textPreahvihear">My <span className="redText">Skills</span></h2>
             </article>
             <div className={style.skillsContainer}>
-                {[htmlData, cssData, jsData].map((item) => {
-                    return (<Skill {...item}/>)
+                {[htmlData, cssData, jsData, reactData, reduxData, sassData].map((item, index) => {
+                    return (<Skill theme={props.theme} {...item}/>)
                 })}
             </div>
-            <div></div>
+            <article>
+                <p className="textPreahvihear">Applications</p>
+            </article>
+            <div className={style.appContainer}>
+                {[figmaData, webstormData].map((item) => {
+                    return (<Skill theme={props.theme} {...item}/>)
+                })}
+            </div>
+            <div className={style.skillsBlockImg}>
+                <img className={style.logo} src={logoDark} alt=""/>
+                <img src={props.theme === "light" ? skillsBlockForLightImg : skillsBlockForDarkImg} alt=""/>
+            </div>
+            <Footer/>
         </div>
     )
 }
@@ -51,10 +96,7 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {
-        toggleTheme,
-        selectLang
-    }),
+    connect(mapStateToProps, {}),
     withHeader
 )
 (SkillsPage)

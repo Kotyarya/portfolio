@@ -4,24 +4,72 @@
   align-items: center;
   color: white;
   margin-top: 13.4rem;
+  position: relative;
+
+  .gradient {
+    width: 96.2rem;
+    height: 107.9rem;
+    position: absolute;
+    background: radial-gradient(50% 50% at 50% 50%, #AC3C3C 0%, rgba(133, 15, 15, 0) 100%);
+    top: 4rem;
+  }
 
   article {
     display: flex;
-    width: 116.2rem;
+    width: calc(2 * 65rem);
 
     h2 {
       font-size: 9.6rem;
       letter-spacing: 0.1rem;
       font-weight: 400;
     }
+
+    p {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+      font-size: 4.8rem;
+    }
   }
 
   .skillsContainer {
+    margin-top: 7.2rem;
     display: grid;
-    grid-template-columns: 57rem 57rem;
-    grid-template-rows: 19.5rem 19.5rem 19.5rem;
-    grid-column-gap: 2rem;
-    grid-row-gap: 1.7rem;
+    grid-template-columns: repeat(2, 65rem);
+    grid-template-rows: repeat(3, 24rem);
+    grid-column-gap: 3.5rem;
+    grid-row-gap: 2.7rem;
+  }
+
+  .appContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 65rem);
+    grid-template-rows: repeat(1, 24rem);
+    grid-column-gap: 3.5rem;
+  }
+
+  .skillsBlockImg {
+    margin-top: 31.6rem;
+    position: relative;
+    margin-bottom: 31.6rem;
+
+    img {
+      width: 117.2rem;
+    }
+
+    .logo {
+      top: 41.4rem;
+      left: 46.4rem;
+      mix-blend-mode: lighten;
+      width: 22.4rem;
+      position: absolute;
+    }
   }
 }
 
+[theme="light"].content {
+  color: black;
+
+  .gradient {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 0, 0, 0.6) 0%, rgba(255, 96, 96, 0.18) 75%, rgba(255, 255, 255, 0) 100%);
+  }
+}

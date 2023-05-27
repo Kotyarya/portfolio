@@ -1,0 +1,125 @@
+.footer {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 11.3rem;
+  background: #470000;
+  padding-left: 43.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+
+  .logo {
+    width: 16.2rem;
+    height: 8.1rem;
+    mix-blend-mode: lighten;
+  }
+
+  .nav {
+    display: flex;
+    gap: 5.5rem;
+    align-items: center;
+    padding-right: 39.6rem;
+
+    .list {
+      display: flex;
+      gap: 5.5rem;
+
+      .item {
+        color: white;
+        letter-spacing: 0.1rem;
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 2.5rem;
+      }
+
+      .item:hover {
+        color: #BA2727;
+      }
+
+      .active {
+        color: #BA2727;
+      }
+    }
+
+    .btn {
+      width: 4.2rem;
+      height: 4.2rem;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4.2rem;
+        height: 4.2rem;
+      }
+    }
+  }
+
+  .btnGoTop {
+    position: absolute;
+    width: 19.7rem;
+    height: 19.7rem;
+    border-radius: 50%;
+    background: #470000;
+    bottom: 0;
+    left: 88.6rem;
+    box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+
+    img {
+      width: 9rem;
+      padding-bottom: 9rem;
+    }
+
+    .btnGoTopSpan {
+      display: block;
+      width: 19.7rem;
+      height: calc(19.7rem / 2);
+      background: #470000;
+      position: absolute;
+      top: 9rem;
+    }
+  }
+}
+
+[theme="light"].footer {
+  background: #ffffff;
+
+  .logo {
+    mix-blend-mode: normal;
+  }
+
+  .btnGoTop {
+    position: absolute;
+    width: 19.7rem;
+    height: 19.7rem;
+    border-radius: 50%;
+    background: #ffffff;
+    bottom: 0;
+    left: 88.6rem;
+    box-shadow: inset 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+
+    img {
+      width: 9rem;
+      filter: invert(1);
+    }
+
+    .btnGoTopSpan {
+      background: #ffffff;
+    }
+  }
+
+  .nav {
+    .list {
+      .item {
+        color: #000000;
+      }
+
+      .active {
+        color: #BA2727;
+      }
+    }
+  }
+}

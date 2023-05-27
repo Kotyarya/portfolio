@@ -1,13 +1,17 @@
 import style from "./Header.module.scss"
-import logoForDark from "./img/logoForDark.png"
-import logoForLight from "./img/logoForLight.png"
+import logoForDark from "../../assets/img/logoForDark.png"
+import logoForLight from "../../assets/img/logoForLight.png"
 import moon from "./img/darkThemeIcon.png"
 import sun from "./img/lightThemeIcon.png"
 import langForDark from "./img/langIconForDark.png"
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
+import {connect} from "react-redux";
+import {toggleTheme} from "../../Redux/Reducers/themeReducer";
+import {selectLang} from "../../Redux/Reducers/langReducer";
 
 const Header = (props) => {
+
     const [editMode, toggleEditMode] = useState(false)
     return (
         <header className={style.header} theme={props.theme}>
@@ -43,5 +47,14 @@ const Header = (props) => {
     )
 }
 
+const mapStateToProps = (state) => {
+    return {
+        theme: state.themeState.theme,
+        lang: state.langState.lang
+    }
+}
 
-export default Header
+export default connect(mapStateToProps, {
+    toggleTheme,
+    selectLang
+})(Header)

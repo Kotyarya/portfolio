@@ -3,8 +3,6 @@ import arrowImg from "./img/arrow.png";
 import homeImg from "./img/homeImg.png";
 import eclipseImg from "./img/eclipse.png"
 import {connect} from "react-redux";
-import {toggleTheme} from "../../Redux/Reducers/themeReducer";
-import {selectLang} from "../../Redux/Reducers/langReducer";
 import Span from "./Span";
 import {compose} from "@reduxjs/toolkit";
 import withHeader from "../../HOC/withHeader";
@@ -21,7 +19,6 @@ const HomePage = (props) => {
 
 
     const setText = (textEng, textPln) => props.lang === "eng" ? textEng : textPln
-
 
     return (
         <>
@@ -74,10 +71,7 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {
-        toggleTheme,
-        selectLang
-    }),
+    connect(mapStateToProps, {}),
     withHeader
 )
 (HomePage)
