@@ -5,24 +5,18 @@ import moon from "./img/darkThemeIcon.png"
 import sun from "./img/lightThemeIcon.png"
 import langForDark from "./img/langIconForDark.png"
 import {NavLink} from "react-router-dom";
-import {useState} from "react";
-import {connect} from "react-redux";
-import {toggleTheme} from "../../Redux/Reducers/themeReducer";
-import {selectLang} from "../../Redux/Reducers/langReducer";
 
 const Header = (props) => {
-
-    const [editMode, toggleEditMode] = useState(false)
     return (
         <header className={style.header} theme={props.theme}>
-            {editMode
-                ? <div onClick={() => toggleEditMode(false)}
+            {props.editMode
+                ? <div onClick={() => props.toggleEditMode(false)}
                        className={style.selectLang}>
-                    <button onClick={() => props.selectLang("eng")} className={style.langBtn}>ENG</button>
+                    <button onClick={() => props.setLanguage("eng")} className={style.langBtn}>ENG</button>
                     <span className={style.span}></span>
-                    <button onClick={() => props.selectLang("pln")} className={style.langBtn}>PLN</button>
+                    <button onClick={() => props.setLanguage("pln")} className={style.langBtn}>PLN</button>
                 </div>
-                : ""
+                : null
             }
             <NavLink to={"/"}>
                 <img className={style.logo} src={props.theme === "light" ? logoForLight : logoForDark} alt=""/>
@@ -36,10 +30,10 @@ const Header = (props) => {
                     <NavLink to={"/contact"}
                              className={({isActive}) => isActive ? `${style.item} ${style.active}` : style.item}>{props.lang === "eng" ? "Contact" : "Kontakt"}</NavLink>
                 </ul>
-                <button onClick={() => props.toggleTheme()} className={style.btn}>
+                <button onClick={() => props.setTheme()} className={style.btn}>
                     <img src={props.theme === "light" ? sun : moon} alt=""/>
                 </button>
-                <button onClick={() => toggleEditMode(true)} className={style.btn}>
+                <button onClick={() => props.toggleEditMode(true)} className={style.btn}>
                     <img className={style.langIcon} src={langForDark} alt=""/>
                 </button>
             </nav>
@@ -47,14 +41,5 @@ const Header = (props) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        theme: state.themeState.theme,
-        lang: state.langState.lang
-    }
-}
 
-export default connect(mapStateToProps, {
-    toggleTheme,
-    selectLang
-})(Header)
+export default Header

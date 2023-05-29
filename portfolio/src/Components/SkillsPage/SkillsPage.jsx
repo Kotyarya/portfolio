@@ -5,9 +5,9 @@ import style from "./SkillsPage.module.scss"
 import skillsBlockForDarkImg from "./img/skillsBlockForDarkImg.png"
 import skillsBlockForLightImg from "./img/skillsBlockForLightImg.png"
 import logoDark from "../../assets/img/logoForDark.png"
-import Footer from "../Footer/Footer";
 import Skill from "./Skill/Skill";
 import {nanoid} from "nanoid";
+import withFooter from "../../HOC/withFooter";
 
 const SkillsPage = (props) => {
 
@@ -39,13 +39,13 @@ const SkillsPage = (props) => {
                 <img className={style.logo} src={logoDark} alt=""/>
                 <img src={theme === "light" ? skillsBlockForLightImg : skillsBlockForDarkImg} alt=""/>
             </div>
-            <Footer/>
         </div>
     )
 }
 
 
 export default compose(
-    withHeader
+    withHeader,
+    withFooter
 )
 (SkillsPage)

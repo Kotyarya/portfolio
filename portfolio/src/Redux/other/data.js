@@ -34,8 +34,8 @@ export const skillsData = {
             logo: reactImg
         },
         {
-            title: "Redux & Redux-Toolkit",
-            descriptionEng: "Redux is a tool for managing data state and user interface in JavaScript applications with a large number of entities. It is a JavaScript library.",
+            title: "redux1 & redux1-Toolkit",
+            descriptionEng: "redux1 is a tool for managing data state and user interface in JavaScript applications with a large number of entities. It is a JavaScript library.",
             descriptionPln: `Redux to narzędzie do zarządzania stanem danych i interfejsem użytkownika w aplikacjach JavaScript z dużą liczbą podmiotów. Jest to biblioteka JavaScript.`,
             logo: reduxImg
         },

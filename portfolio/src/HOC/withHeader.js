@@ -1,10 +1,10 @@
-import Header from "../Components/Header/Header";
+import HeaderContainer from "../Components/Header/HeaderContainer";
 
 const withHeader = (Component) => {
     return (props) => {
         return (
             <>
-                <Header {...props}/>
+                <HeaderContainer {...props}/>
                 <Component {...props}/>
             </>
         )

@@ -1,9 +1,8 @@
 import './App.css';
-import {connect} from "react-redux";
 import HomePage from "./Components/HomePage/HomePage";
 import {Route, Routes} from "react-router-dom";
 import SkillsPage from "./Components/SkillsPage/SkillsPage";
-import Header from "./Components/Header/Header";
+import HeaderContainer from "./Components/Header/HeaderContainer";
 
 function App(props) {
 
@@ -12,16 +11,11 @@ function App(props) {
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/skills" element={<SkillsPage/>}/>
-                <Route path="/lab" element={<Header/>}/>
+                <Route path="/lab" element={<HeaderContainer/>}/>
             </Routes>
         </div>
     );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        theme: state.themeState.theme
-    }
-}
 
-export default connect(mapStateToProps)(App);
+export default App;
