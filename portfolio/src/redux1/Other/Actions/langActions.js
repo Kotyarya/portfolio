@@ -4,5 +4,4 @@ const setLanguage = () => {
     }
 }
 
-
 export default setLanguage
