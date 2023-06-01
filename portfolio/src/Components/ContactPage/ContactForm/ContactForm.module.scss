@@ -1,0 +1,58 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  align-items: flex-start;
+
+  input, textarea, button {
+    font-size: 2.4rem;
+    padding-left: 2.7rem;
+    padding-right: 2.4rem;
+    outline: none;
+    background: #360D0D;
+    border: .1rem solid #684747;
+    border-radius: .7rem;
+    color: white;
+  }
+
+  input::placeholder {
+    color: #9A8686;
+  }
+
+  .name {
+    width: 39.8rem;
+    height: 6.2rem;
+  }
+
+  .email {
+    width: 39.8rem;
+    height: 6.2rem;
+  }
+
+  .message {
+    min-width: 79.7rem;
+    min-height: 26rem;
+    max-width: 79.7rem;
+    max-height: 26rem;
+    display: flex;
+    padding-top: 1.6rem;
+  }
+
+  .message::placeholder {
+    color: #9A8686;
+  }
+
+  .submit {
+    width: 16.7rem;
+    height: 6.2rem;
+
+  }
+}
+
+[theme="light"].form {
+  input, textarea, button {
+    background: #FFC7C7;
+    border: .1rem solid #684747;
+    color: black;
+  }
+}

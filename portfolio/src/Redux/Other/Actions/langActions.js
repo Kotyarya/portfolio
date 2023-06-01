@@ -1,6 +1,8 @@
+import {SETLANGUAGE} from "../Types/langTypes";
+
 const setLanguage = () => {
     return {
-        type: "SETLANGUAGE"
+        type: SETLANGUAGE
     }
 }
 

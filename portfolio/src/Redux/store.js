@@ -1,13 +1,9 @@
-import {configureStore} from "@reduxjs/toolkit";
-import themeReducer from "./Reducers/themeReducer";
-import langReducer from "./Reducers/langReducer";
-import skillsReducer from "./Reducers/skillsReducer";
+import {createStore} from "@reduxjs/toolkit";
+import rootReducer from "./Reducers";
 
-export const store = configureStore({
-    reducer: {
-        themeState: themeReducer,
-        langState: langReducer,
-        skillsState: skillsReducer
-    },
-    devTools: true
-})
+const store = createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
+
+export default store

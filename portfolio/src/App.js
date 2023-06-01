@@ -1,21 +1,30 @@
 import './App.css';
-import HomePage from "./Components/HomePage/HomePage";
 import {Route, Routes} from "react-router-dom";
-import SkillsPage from "./Components/SkillsPage/SkillsPage";
 import HeaderContainer from "./Components/Header/HeaderContainer";
+import HomePageContainer from "./Components/HomePage/HomePageContainer";
+import {useSelector} from "react-redux";
+import SkillsPageContainer from "./Components/SkillsPage/SkillsPageContainer";
+import ContactPageContainer from "./Components/ContactPage/ContactPageContainer";
 
-function App(props) {
-
+const App = (props) => {
     return (
         <div className={"app"} theme={props.theme}>
             <Routes>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/skills" element={<SkillsPage/>}/>
+                <Route path="/" element={<HomePageContainer/>}/>
+                <Route path="/skills" element={<SkillsPageContainer/>}/>
                 <Route path="/lab" element={<HeaderContainer/>}/>
+                <Route path="/contact" element={<ContactPageContainer/>}/>
             </Routes>
         </div>
     );
 }
 
+const AppContainer = () => {
 
-export default App;
+    const theme = useSelector(state => state.themeReducer.theme)
+    return (
+        <App theme={theme}/>
+    )
+}
+
+export default AppContainer;

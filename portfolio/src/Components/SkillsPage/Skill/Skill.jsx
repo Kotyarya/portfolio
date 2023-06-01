@@ -3,12 +3,6 @@ import effectForDarkImg from "./img/effectForDarkImg.png"
 import effectForLightImg from "./img/effectForLightImg.png"
 
 const Skill = (props) => {
-
-
-    const setText = (eng, pln) => {
-        return props.lang === "eng" ? eng : pln
-    }
-
     return (
         <div className={style.block} theme={props.theme}>
             <div className={style.img}>
@@ -18,7 +12,7 @@ const Skill = (props) => {
             </div>
             <div className={style.text}>
                 <h2 className=" textPoppins600">{props.title}</h2>
-                <p className={style.description + " textPoppins500"}>{setText(props.descriptionEng, props.descriptionPln)}</p>
+                <p className={style.description + " textPoppins500"}>{props.setText(props.descriptionEng, props.descriptionPln)}</p>
             </div>
         </div>
     )

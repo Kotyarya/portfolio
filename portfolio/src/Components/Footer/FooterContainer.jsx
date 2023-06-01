@@ -10,8 +10,8 @@ const FooterContainer = (props) => {
         })
     }
 
-    const theme = useSelector(state => state.themeState.theme)
-    const lang = useSelector(state => state.langState.lang)
+    const theme = useSelector(state => state.themeReducer.theme)
+    const lang = useSelector(state => state.langReducer.lang)
     return (
         <Footer theme={theme} lang={lang} goTop={goTop}/>
     )

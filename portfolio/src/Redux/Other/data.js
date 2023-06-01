@@ -1,11 +1,15 @@
-import htmlImg from "../../Components/SkillsPage/img/htmlImg.png";
-import cssImg from "../../Components/SkillsPage/img/cssImg.png";
-import jsImg from "../../Components/SkillsPage/img/jsImg.png";
-import reactImg from "../../Components/SkillsPage/img/reactImg.png";
-import reduxImg from "../../Components/SkillsPage/img/reduxImg.png";
-import sassImg from "../../Components/SkillsPage/img/sassImg.png";
-import figmaImg from "../../Components/SkillsPage/img/figmaImg.png";
-import webstormImg from "../../Components/SkillsPage/img/webstormImg.png";
+import htmlImg from "../../assets/img/htmlImg.png";
+import cssImg from "../../assets/img/cssImg.png";
+import jsImg from "../../assets/img/jsImg.png";
+import reactImg from "../../assets/img/reactImg.png";
+import reduxImg from "../../assets/img/reduxImg.png";
+import sassImg from "../../assets/img/sassImg.png";
+import figmaImg from "../../assets/img/figmaImg.png";
+import webstormImg from "../../assets/img/webstormImg.png";
+import InstagramLogo from "../../assets/img/Instagram.png"
+import FacebookLogo from "../../assets/img/Facebook.png"
+import GitHubLogo from "../../assets/img/GitHub.png"
+import LinkedInLogo from "../../assets/img/LinkedIn.png"
 
 export const skillsData = {
     skills: [
@@ -34,8 +38,8 @@ export const skillsData = {
             logo: reactImg
         },
         {
-            title: "redux1 & redux1-Toolkit",
-            descriptionEng: "redux1 is a tool for managing data state and user interface in JavaScript applications with a large number of entities. It is a JavaScript library.",
+            title: "Redux",
+            descriptionEng: "Redux is a tool for managing data state and user interface in JavaScript applications with a large number of entities. It is a JavaScript library.",
             descriptionPln: `Redux to narzędzie do zarządzania stanem danych i interfejsem użytkownika w aplikacjach JavaScript z dużą liczbą podmiotów. Jest to biblioteka JavaScript.`,
             logo: reduxImg
         },
@@ -58,4 +62,30 @@ export const skillsData = {
         logo: webstormImg
     }]
 }
+export const links = [
+    {
+        title: "Instagram",
+        href: "https://www.instagram.com/kotyarya_/",
+        logo: InstagramLogo,
+        color: "#EB4A63"
+    },
+    {
+        title: "Facebook",
+        href: "https://www.facebook.com/profile.php?id=100010763708201",
+        logo: FacebookLogo,
+        color: "#1877F2"
+    },
+    {
+        title: "GitHub",
+        href: "https://github.com/Kotyarya",
+        logo: GitHubLogo,
+        color: "white"
+    },
+    {
+        title: "LinkedIn",
+        href: "https://www.linkedin.com/in/maksym-aksamitnyi-926329277/",
+        logo: LinkedInLogo,
+        color: "#0274B3"
+    }
+]
 
