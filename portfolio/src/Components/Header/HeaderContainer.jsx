@@ -9,8 +9,8 @@ const HeaderContainer = () => {
     const lang = useSelector(state => state.langReducer.lang)
     const dispatch = useDispatch()
 
-    const setLanguage = () => {
-        dispatch(allActions.langActions())
+    const setLanguage = (lang) => {
+        dispatch(allActions.langActions(lang))
     }
     const setTheme = () => {
         dispatch(allActions.themeActions())

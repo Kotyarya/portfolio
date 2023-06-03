@@ -7,11 +7,11 @@ const initialState = {
 const langReducer = (state = initialState, action) => {
     switch (action.type) {
         case SETLANGUAGE :
-            const lang = state.lang === "eng" ? "pln" : "eng"
-            localStorage.setItem("lang", lang)
+            debugger
+            localStorage.setItem("lang", action.lang)
             return {
                 ...state,
-                lang: lang
+                lang: action.lang
             }
 
         default :
