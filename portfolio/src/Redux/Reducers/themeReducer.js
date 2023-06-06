@@ -13,7 +13,6 @@ const themeReducer = (state = initialState, action) => {
                 ...state,
                 theme: theme
             }
-
         default :
             return state
     }

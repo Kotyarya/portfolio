@@ -26,7 +26,7 @@ const Header = (props) => {
                     <NavLink to={"/skills"}
                              className={({isActive}) => isActive ? `${style.item} ${style.active}` : style.item}>{props.lang === "eng" ? "Skills" : "Umiejętności"}</NavLink>
                     <NavLink to={"/lab"}
-                             className={({isActive}) => isActive ? `${style.item} ${style.active}` : style.item}>{props.lang === "eng" ? "Lab" : "Laboratorium"}</NavLink>
+                             className={({isActive}) => isActive ? `${style.item} ${style.active}` : style.item}>Lab</NavLink>
                     <NavLink to={"/contact"}
                              className={({isActive}) => isActive ? `${style.item} ${style.active}` : style.item}>{props.lang === "eng" ? "Contact" : "Kontakt"}</NavLink>
                 </ul>

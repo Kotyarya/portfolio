@@ -7,7 +7,6 @@ const initialState = {
 const langReducer = (state = initialState, action) => {
     switch (action.type) {
         case SETLANGUAGE :
-            debugger
             localStorage.setItem("lang", action.lang)
             return {
                 ...state,

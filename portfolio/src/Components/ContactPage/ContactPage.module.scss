@@ -47,3 +47,19 @@
 [theme="light"].container {
   color: black;
 }
+
+.isFetchingBlock {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #000000;
+  top: 0;
+  opacity: 0.7;
+  display: grid;
+  place-content: center;
+
+  img {
+    width: 40rem;
+    height: 40rem;
+  }
+}

@@ -4,6 +4,11 @@
   gap: 4.5rem;
   align-items: flex-start;
 
+  .error {
+    font-size: 4rem;
+  }
+
+
   input, textarea, button {
     font-size: 2.4rem;
     padding-left: 2.7rem;
@@ -28,6 +33,7 @@
     width: 39.8rem;
     height: 6.2rem;
   }
+
 
   .message {
     min-width: 79.7rem;
