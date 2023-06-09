@@ -1,15 +1,20 @@
-import htmlImg from "../../assets/img/htmlImg.png";
-import cssImg from "../../assets/img/cssImg.png";
-import jsImg from "../../assets/img/jsImg.png";
-import reactImg from "../../assets/img/reactImg.png";
-import reduxImg from "../../assets/img/reduxImg.png";
-import sassImg from "../../assets/img/sassImg.png";
-import figmaImg from "../../assets/img/figmaImg.png";
-import webstormImg from "../../assets/img/webstormImg.png";
-import InstagramLogo from "../../assets/img/Instagram.png"
-import FacebookLogo from "../../assets/img/Facebook.png"
-import GitHubLogo from "../../assets/img/GitHub.png"
-import LinkedInLogo from "../../assets/img/LinkedIn.png"
+import htmlImg from "../../assets/img/skills/htmlImg.png";
+import cssImg from "../../assets/img/skills/cssImg.png";
+import jsImg from "../../assets/img/skills/jsImg.png";
+import reactImg from "../../assets/img/skills/reactImg.png";
+import reduxImg from "../../assets/img/skills/reduxImg.png";
+import sassImg from "../../assets/img/skills/sassImg.png";
+import figmaImg from "../../assets/img/skills/figmaImg.png";
+import webstormImg from "../../assets/img/skills/webstormImg.png";
+import InstagramLogo from "../../assets/img/links/Instagram.png"
+import FacebookLogo from "../../assets/img/links/Facebook.png"
+import GitHubLogo from "../../assets/img/links/GitHub.png"
+import LinkedInLogo from "../../assets/img/links/LinkedIn.png"
+import webovio from "../../assets/img/project/Webovio.png"
+import brandingDigital from "../../assets/img/project/Branding & Digital Design studio.png"
+import artifical from "../../assets/img/project/Artificial intelligence & Syber security.png"
+import remmy from "../../assets/img/project/Remmy.png"
+
 
 export const skillsData = {
     skills: [
@@ -86,6 +91,44 @@ export const links = [
         href: "https://www.linkedin.com/in/maksym-aksamitnyi-926329277/",
         logo: LinkedInLogo,
         color: "#0274B3"
+    }
+]
+export const project = [
+    {
+        title: "Webovio",
+        descriptionENG: "A creative agency landing page is a captivating and impactful visual platform created to showcase the agency's unique and creative services. From the very moment you land on this site, you are greeted with a modern and stylish design that instantly grabs your attention.",
+        descriptionPLN: "Strona docelowa kreatywnej agencji to ekscytująca i efektowna platforma wizualna, stworzona do prezentowania unikalnych i kreatywnych usług agencji. Od samego początku, gdy trafia się na tę stronę, witamy Cię nowoczesnym i stylowym designem, który natychmiast przyciąga Twoją uwagę.",
+        location: "Webovio",
+        img: webovio,
+        tech: [htmlImg, cssImg, jsImg],
+        rotation: "right"
+    },
+    {
+        title: "Branding & Digital Design studio",
+        descriptionENG: "The landing page of a digital design studio is an elegant and functional web platform showcasing the studio's creative and innovative services. From the very first glance at this site, you are greeted with a stylish and modern design that immediately captures your attention.",
+        descriptionPLN: "Strona docelowa studia projektowania cyfrowego to elegancka i funkcjonalna platforma internetowa, prezentująca kreatywne i innowacyjne usługi studia. Już od pierwszego spojrzenia na tę stronę, witają Cię stylowy i nowoczesny design, który natychmiast przyciąga Twoją uwagę.",
+        location: "Branding-&-Digital-Design-studio",
+        img: brandingDigital,
+        tech: [htmlImg, cssImg, jsImg],
+        rotation: "left"
+    },
+    {
+        title: "Artificial intelligence & Syber security",
+        descriptionENG: "On this landing page, you will immerse yourself in the captivating world of artificial intelligence and security in the field of cybersecurity. As soon as you land on this site, you are greeted with an attractive and modern design that immediately captures your attention.",
+        descriptionPLN: "Na tej stronie docelowej zanurzysz się w fascynującym świecie sztucznej inteligencji i bezpieczeństwa w dziedzinie cyberbezpieczeństwa. Jak tylko trafisz na tę stronę, zostaniesz powitany atrakcyjnym i nowoczesnym designem, który natychmiast przyciąga Twoją uwagę.",
+        location: "Artificial-intelligence-&-Syber-security",
+        img: artifical,
+        tech: [htmlImg, cssImg, jsImg],
+        rotation: "right"
+    },
+    {
+        title: "Remmy",
+        descriptionENG: "The landing page about skin and facial health offers you unique solutions for maintaining and improving the condition of your skin. From the very first glance at this site, you will see a vibrant and appealing design that immediately grabs your attention.",
+        descriptionPLN: "Strona docelowa o zdrowiu skóry i twarzy oferuje unikalne rozwiązania dla utrzymania i poprawy kondycji Twojej skóry. Już od pierwszego spojrzenia na tę stronę zauważysz jasny i atrakcyjny design, który natychmiast przyciągnie Twoją uwagę.",
+        location: "Remmy",
+        img: remmy,
+        tech: [htmlImg, cssImg],
+        rotation: "left"
     }
 ]
 

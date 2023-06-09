@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 import SkillsPageContainer from "./Components/SkillsPage/SkillsPageContainer";
 import ContactPageContainer from "./Components/ContactPage/ContactPageContainer";
 import LabContainer from "./Components/Lab/LabContainer";
+import Webovio from "./Components/Projects/Webovio/Webovio";
 
 const App = (props) => {
     return (
@@ -14,6 +15,7 @@ const App = (props) => {
                 <Route path="/skills" element={<SkillsPageContainer/>}/>
                 <Route path="/lab" element={<LabContainer/>}/>
                 <Route path="/contact" element={<ContactPageContainer/>}/>
+                <Route path={"/lab/Webovio"} element={<Webovio/>}/>
             </Routes>
         </div>
     );

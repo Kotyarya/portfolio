@@ -1,7 +1,7 @@
 import style from "./Footer.module.scss"
 import {NavLink} from "react-router-dom";
-import logoForLight from "../../assets/img/logoForLight.png";
-import logoForDark from "../../assets/img/logoForDark.png";
+import logoForLight from "../../assets/img/general/logoForLight.png";
+import logoForDark from "../../assets/img/general/logoForDark.png";
 import arrow from "./img/arrow.png";
 
 const Footer = (props) => {

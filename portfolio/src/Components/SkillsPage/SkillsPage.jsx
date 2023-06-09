@@ -1,7 +1,7 @@
 import style from "./SkillsPage.module.scss"
 import skillsBlockForDarkImg from "./img/skillsBlockForDarkImg.png"
 import skillsBlockForLightImg from "./img/skillsBlockForLightImg.png"
-import logoDark from "../../assets/img/logoForDark.png"
+import logoDark from "../../assets/img/general/logoForDark.png"
 import Skill from "./Skill/Skill";
 import {nanoid} from "nanoid";
 

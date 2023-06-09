@@ -1,0 +1,523 @@
+:root {
+    --fontSize: 0.6945vw;
+}
+
+p,
+a {
+    margin: 0;
+    font-family: "Poppins", serif;
+    color: #000;
+    font-weight: 400;
+}
+
+.webovio {
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: var(--fontSize);
+}
+
+a:hover {
+    color: rgba(255, 215, 35, 1);
+}
+
+.background {
+    position: absolute;
+    z-index: 0;
+    width: 100vw;
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    margin-top: 2.4rem;
+    margin-left: 16.4rem;
+    width: 25.8rem;
+    height: 4rem;
+}
+
+.nav {
+    position: relative;
+    z-index: 3;
+    margin-top: 2.7rem;
+    margin-right: 16.6rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.creative {
+    position: relative;
+    z-index: 2;
+    margin-left: 16.6rem;
+    margin-top: 12.1rem;
+}
+
+.creativeSubtitle {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.creativeTitle {
+    font-weight: 700;
+    font-size: 6rem;
+    margin-top: 2.2rem;
+    line-height: 7.4rem;
+    color: #fff;
+}
+
+.creativeDiscription {
+    font-size: 1.6rem;
+    margin-top: 2.4rem;
+    margin-bottom: 4.5rem;
+    line-height: 2.6rem;
+    color: #fff;
+}
+
+.creativeLink {
+    color: rgba(255, 215, 35, 1);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.logoTeams {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    display: flex;
+    gap: 6.6rem;
+    width: 127.6rem;
+    height: 22.7rem;
+    margin-left: 16.5rem;
+    margin-top: 10.7rem;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+    position: absolute;
+}
+
+.logoTeams img {
+    width: 15.6rem;
+    height: 11.3rem;
+}
+
+.strategy {
+    margin-left: 16.6rem;
+    margin-top: 21rem;
+    height: 64.4rem;
+    display: flex;
+}
+
+.strategyText {
+    padding-top: 24.4rem;
+    margin-right: 16rem;
+}
+
+.strategySubtitle {
+    font-size: 1.4rem;
+    color: rgba(77, 83, 60, 0.9);
+}
+
+.strategyTitle {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: rgba(77, 83, 60, 1);
+    padding-top: 3rem;
+}
+
+.strategTitle span {
+    background-color: #fffbe9;
+}
+
+.strategDiscription {
+    font-size: 1.6rem;
+    color: rgba(33, 56, 66, 0.6);
+    padding-top: 3.5rem;
+    padding-bottom: 4.2rem;
+}
+
+.strategyLink {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(212, 214, 212, 1);
+}
+
+.strategyPublication {
+    background-color: #fff;
+    box-shadow: 0 100px 100px rgba(0, 0, 0, 0.145947);
+    width: 47.4rem;
+}
+
+.publicationDiscription {
+    padding-top: 24.4rem;
+    font-style: italic;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-left: 4rem;
+    padding-right: 0.8rem;
+    color: rgba(77, 83, 60, 1);
+}
+
+.publicationSignature {
+    display: flex;
+    margin-left: 4rem;
+    margin-top: 5rem;
+}
+
+.publicationSignature img {
+    border-radius: 50%;
+    width: 9rem;
+    height: 9rem;
+    box-shadow: 20px 25px 43px rgba(0, 0, 0, 0.18);
+}
+
+.signatureText {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signatureTitle {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: rgba(77, 83, 60, 1);
+}
+
+.signatureSubtitle {
+    font-size: 1.6rem;
+    color: rgba(21, 41, 52, 1);
+}
+
+.project {
+    display: flex;
+    margin-top: 30rem;
+    margin-left: 16.5rem;
+    gap: 13.3rem;
+}
+
+.projectTitle {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: rgba(77, 83, 60, 1);
+}
+
+.projectDiscription {
+    font-size: 1.6rem;
+    color: rgba(33, 56, 66, 0.6);
+}
+
+.blockBalenciaga {
+    display: flex;
+    margin-top: 11rem;
+    gap: 9.6rem;
+    margin-bottom: 13.5rem;
+}
+
+.blockImg {
+    width: 73.5rem;
+    height: 50.5rem;
+}
+
+.blockText {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-self: center;
+}
+
+.blockTitle {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: rgba(77, 83, 60, 1);
+}
+
+.blockDiscription {
+    font-size: 1.6rem;
+    color: rgba(33, 56, 66, 0.6);
+}
+
+.blockLink {
+    font-size: 1.6rem;
+    color: rgba(212, 214, 212, 1);
+    font-weight: 600;
+    margin-top: 6.6rem;
+}
+
+.blockCard {
+    position: absolute;
+    background-color: #fff;
+    width: 45.3rem;
+    height: 24.3rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 37.2rem 0 0 32.2rem;
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+}
+
+.cardDiscription {
+    font-size: 1.6rem;
+    font-style: italic;
+    padding: 3rem 3rem 0 3rem;
+}
+
+.cardSignature {
+    display: flex;
+    margin-top: 2.4rem;
+    margin-left: 3rem;
+    gap: 1.4rem;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.cardImg {
+    border-radius: 50%;
+    width: 4.6rem;
+    height: 4.6rem;
+    box-shadow: 20px 25px 43px rgba(0, 0, 0, 0.18);
+}
+
+.cardTitle {
+    color: rgba(77, 83, 60, 1);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.cardSubtitle {
+    color: rgba(21, 41, 52, 1);
+    font-size: 1.4rem;
+}
+
+.blockModel {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 11rem;
+    gap: 9.6rem;
+    margin-left: 17.2rem;
+    margin-bottom: 13.5rem;
+}
+
+.blockCardReverse {
+    position: absolute;
+    background-color: #fff;
+    width: 45.3rem;
+    height: 24.3rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 37.2rem 32.2rem 0 0;
+    box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+}
+
+.blockBooking {
+    display: flex;
+    margin-top: 11rem;
+    gap: 9.6rem;
+}
+
+.deation {
+    margin-top: 24rem;
+    margin-left: 16.5rem;
+}
+
+.deationTitle {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: rgba(77, 83, 60, 1);
+}
+
+.deationSeactions {
+    display: flex;
+    gap: 3rem;
+}
+
+.deationSection {
+    display: flex;
+    flex-direction: column;
+    width: 25.5rem;
+    height: 30.9rem;
+    justify-content: space-around;
+}
+
+.sectionTitle {
+    font-size: 2.4rem;
+    color: rgba(77, 83, 60, 1);
+}
+
+.sectionDiscription {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    color: rgba(33, 56, 66, 0.6);
+}
+
+.sectionLink {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(212, 214, 212, 1);
+}
+
+.amazing {
+    background-color: #fafafa;
+    width: 127.5rem;
+    height: 36.2rem;
+    box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    margin-top: 15rem;
+    position: absolute;
+}
+
+.amazingTitle {
+    font-weight: 700;
+    font-size: 6rem;
+    padding-top: 7rem;
+    padding-left: 16.4rem;
+    color: rgba(77, 83, 60, 1);
+}
+
+.amazingLink {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: rgba(212, 214, 212, 1);
+    padding-left: 16.4rem;
+}
+
+footer {
+    margin-top: 32.2rem;
+    background-image: url(img/bg-footer.png);
+    background-size: cover;
+    width: 100%;
+    height: 92rem;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 22.6rem);
+    grid-template-rows: repeat(2, 4.4rem);
+    padding-top: 31rem;
+    padding-left: 16.5rem;
+}
+
+.contactTitle {
+    font-size: 1.6rem;
+    color: rgba(182, 193, 151, 1);
+}
+
+.contactData {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.line {
+    border-bottom: solid;
+    border-color: rgba(93, 101, 68, 1);
+    border-width: 1px;
+    padding-top: 5.2rem;
+    margin-left: 16.5rem;
+    margin-right: 16.5rem;
+}
+
+.footerMenu {
+    margin-left: 16.6rem;
+    padding-top: 6rem;
+    display: flex;
+    gap: 10rem;
+}
+
+.services,
+.help,
+.company {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menuTitle {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.menuLink {
+    font-size: 1.6rem;
+    color: rgba(182, 193, 151, 1);
+    text-decoration: none;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding-left: 10rem;
+}
+
+.mediaInfo {
+    font-weight: 700;
+    color: #fff;
+    font-size: 2.4rem;
+}
+
+.mediaIcon {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.mediaIcon button {
+    border-radius: 50%;
+    width: 3.3rem;
+    height: 3.3rem;
+    border: none;
+    background: #444a34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mediaIcon img {
+    opacity: 0.5;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.mediaIcon button:hover {
+    background-color: rgba(255, 215, 35, 1);
+}
+
+.mediaIcon button:hover img {
+    opacity: 1;
+}
+
+.footerLogo {
+    display: flex;
+    margin-left: 16.5rem;
+    margin-right: 16.5rem;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    align-items: center;
+}
+
+.footerLogo p {
+    color: rgba(181, 192, 150, 1);
+    font-size: 1.4rem;
+}
+
+.footerLogo img {
+    width: 20rem;
+    height: 3.5rem;
+}
