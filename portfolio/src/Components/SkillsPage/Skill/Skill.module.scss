@@ -22,6 +22,14 @@
   background: linear-gradient(315deg, #280404 19.95%, #431010 67.64%, #6D1212 107.08%, #451010 156.61%, #340606 183.21%);
 }
 
+.block:nth-child(7) {
+  background: linear-gradient(45deg, #280404 19.95%, #431010 67.64%, #6D1212 107.08%, #451010 156.61%, #340606 183.21%);
+}
+
+.block:nth-child(8) {
+  background: linear-gradient(315deg, #280404 19.95%, #431010 67.64%, #6D1212 107.08%, #451010 156.61%, #340606 183.21%);
+}
+
 .block {
   display: flex;
   gap: 4.6rem;
@@ -47,7 +55,8 @@
     }
 
     .logoImg {
-      height: 10rem;
+      max-width: 10rem;
+      max-height: 10rem;
     }
   }
 
@@ -93,5 +102,13 @@
 }
 
 [theme="light"].block:nth-child(6) {
+  background: linear-gradient(315deg, #FFF2F2 19.95%, #EDACAC 67.64%, #FF5F5F 107.08%, #F1ADAD 156.61%, #FFF8F8 183.21%);
+}
+
+[theme="light"].block:nth-child(7) {
+  background: linear-gradient(45deg, #FFF2F2 19.95%, #EDACAC 67.64%, #FF5F5F 107.08%, #F1ADAD 156.61%, #FFF8F8 183.21%);
+}
+
+[theme="light"].block:nth-child(8) {
   background: linear-gradient(315deg, #FFF2F2 19.95%, #EDACAC 67.64%, #FF5F5F 107.08%, #F1ADAD 156.61%, #FFF8F8 183.21%);
 }

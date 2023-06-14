@@ -3,9 +3,9 @@ import {Route, Routes} from "react-router-dom";
 import HomePageContainer from "./Components/HomePage/HomePageContainer";
 import {useSelector} from "react-redux";
 import SkillsPageContainer from "./Components/SkillsPage/SkillsPageContainer";
-import ContactPageContainer from "./Components/ContactPage/ContactPageContainer";
 import LabContainer from "./Components/Lab/LabContainer";
-import Webovio from "./Components/Projects/Webovio/Webovio";
+import ContactPageContainer from "./Components/ContactPage/ContactPageContainer";
+import NotFoundPageContainer from "./Components/NotFoundPage/NotFoundPageContainer";
 
 const App = (props) => {
     return (
@@ -15,7 +15,7 @@ const App = (props) => {
                 <Route path="/skills" element={<SkillsPageContainer/>}/>
                 <Route path="/lab" element={<LabContainer/>}/>
                 <Route path="/contact" element={<ContactPageContainer/>}/>
-                <Route path={"/lab/Webovio"} element={<Webovio/>}/>
+                <Route path="*" element={<NotFoundPageContainer/>}/>
             </Routes>
         </div>
     );

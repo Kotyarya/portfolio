@@ -20,10 +20,15 @@ const contactFormReducer = (state = initialState, action) => {
 
 export default contactFormReducer
 
-export const sendMessage = (value) => (dispatch) => {
-    dispatch(toggleIsFetching(true))
-    emailjs.send('service_4quvjob', 'template_8c8brpo', value, "crgi2dH2RVZbWBgMU")
-        .then(response => {
-            dispatch(toggleIsFetching(false))
-        })
+export const sendMessage = (value) => async (dispatch) => {
+    try {
+        dispatch(toggleIsFetching(true))
+        const response = await emailjs.send('service_4quvjob', 'template_8c8brpo', value, "crgi2dH2RVZbWBgMU")
+        console.log(response.text)
+    } catch (e) {
+        alert(`
+        An error occurred and the message was not sent
+        Error type: ${e.status}`)
+    }
+    dispatch(toggleIsFetching(false))
 }

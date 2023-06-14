@@ -4,6 +4,8 @@ import jsImg from "../../assets/img/skills/jsImg.png";
 import reactImg from "../../assets/img/skills/reactImg.png";
 import reduxImg from "../../assets/img/skills/reduxImg.png";
 import sassImg from "../../assets/img/skills/sassImg.png";
+import tsImg from "../../assets/img/skills/tsImg.png"
+import tailwindImg from "../../assets/img/skills/TailwindImg.png"
 import figmaImg from "../../assets/img/skills/figmaImg.png";
 import webstormImg from "../../assets/img/skills/webstormImg.png";
 import InstagramLogo from "../../assets/img/links/Instagram.png"
@@ -53,6 +55,18 @@ export const skillsData = {
             descriptionEng: "Sass is a metalanguage (a language for describing another language) that makes writing CSS code easier and faster.",
             descriptionPln: "Sass to metajęzyk (język opisujący inny język), który ułatwia i przyspiesza pisanie kodu CSS.",
             logo: sassImg
+        },
+        {
+            title: "TypeScript",
+            descriptionEng: "TypeScript (TS, TScript) is a web programming language based on JavaScript. It provides clearer and more reliable code through static typing and the ability to compile to JavaScript.",
+            descriptionPln: "TypeScript (TS, TScript) to język programowania webowego oparty na JavaScript. Zapewnia czytelniejszy i bardziej niezawodny kod dzięki statycznemu typowaniu i możliwości kompilacji do JavaScript.",
+            logo: tsImg
+        },
+        {
+            title: "Tailwind",
+            descriptionEng: "Tailwind CSS is a CSS framework that simplifies and accelerates web development by providing a vast library of pre-defined classes for creating custom user interfaces.",
+            descriptionPln: "Tailwind CSS to framework CSS z dużą biblioteką gotowych klas, który ułatwia tworzenie niestandardowych interfejsów użytkownika, przyspieszając proces tworzenia stron internetowych i utrzymanie kodu.",
+            logo: tailwindImg
         },
     ],
     app: [{

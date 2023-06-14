@@ -8,6 +8,19 @@ import withHeader from "../../HOC/withHeader";
 const HomePage = (props) => {
     return (
         <>
+            {props.editMode ? <div className={style.menuContainer}>
+                <div className={style.menu} theme={props.theme}>
+                    <p className="textPreahvihear">Please select the language in which you want to download this CV</p>
+                    <div>
+                        <button onClick={props.onDownloadCV}>ENG</button>
+                        <button onClick={props.onDownloadCV}>PLN</button>
+                        <button onClick={props.onDownloadCV}>UKR</button>
+                    </div>
+                    <button onClick={() => props.setEditMode(false)} className={style.close}>
+                    </button>
+                </div>
+                <div className={style.bg}></div>
+            </div> : null}
             <div className={style.wrapper}>
                 <div className={style.content} theme={props.theme}>
                     <div className={style.title}>
@@ -43,7 +56,7 @@ const HomePage = (props) => {
                             {props.setText("I am a self-taught front-end programmer. I love this job, so I'm always happy to have any opportunity. I'm a perfectionist from birth, so I can't afford to do my job in a haphazard way.", "Jestem programistą front-endowym samoukiem. Uwielbiam tę pracę, więc zawsze cieszę się na każdą okazję. Jestem perfekcjonistą od urodzenia, więc nie mogę sobie pozwolić na wykonywanie mojej pracy w przypadkowy sposób.")}
                         </div>
                     </div>
-                    <button className={style.btn} onClick={props.onDownloadCV}>DOWNLOAD CV</button>
+                    <button className={style.btn} onClick={() => props.setEditMode(true)}>DOWNLOAD CV</button>
                 </div>
             </div>
         </>

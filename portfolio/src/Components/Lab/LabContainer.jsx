@@ -1,9 +1,7 @@
-import {compose} from "@reduxjs/toolkit";
 import withHeader from "../../HOC/withHeader";
 import Lab from "./Lab";
 import {useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
-import withFooter from "../../HOC/withFooter";
 import {project} from "../../Redux/Other/data";
 
 const LabContainer = () => {
@@ -18,4 +16,4 @@ const LabContainer = () => {
     )
 }
 
-export default compose(withHeader, withFooter)(LabContainer)
+export default withHeader(LabContainer)

@@ -7,8 +7,8 @@
   position: relative;
 
   .gradient {
-    width: 96.2rem;
-    height: 107.9rem;
+    width: 110rem;
+    height: 120rem;
     position: absolute;
     background: radial-gradient(50% 50% at 50% 50%, #AC3C3C 0%, rgba(133, 15, 15, 0) 100%);
     top: 4rem;
@@ -35,7 +35,7 @@
     margin-top: 7.2rem;
     display: grid;
     grid-template-columns: repeat(2, 65rem);
-    grid-template-rows: repeat(3, 24rem);
+    grid-template-rows: repeat(4, 24rem);
     grid-column-gap: 3.5rem;
     grid-row-gap: 2.7rem;
   }

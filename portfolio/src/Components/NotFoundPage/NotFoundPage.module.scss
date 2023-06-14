@@ -1,0 +1,23 @@
+.block {
+  display: grid;
+  place-content: center;
+  margin-top: 20rem;
+
+  article {
+    h2 {
+      text-align: center;
+      width: 124.1rem;
+      font-size: 9.6rem;
+      font-weight: 400;
+      color: white;
+    }
+  }
+}
+
+[theme="light"].block {
+  article {
+    h2 {
+      color: black;
+    }
+  }
+}
